@@ -14,9 +14,7 @@ function check(event) {
             elements[i].style.display = "none"
         }
         else {
-            elements[i].style.display = "block"
+        elements[i].style.display = "block"
         }
-
-
     }
 }
