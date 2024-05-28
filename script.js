@@ -1,20 +1,18 @@
 // select input 
-let enteredText = ""
+let enteredText = "";
 
 // select elements 
-
-let container = document.querySelector("div")
-let elements = container.querySelectorAll("h1")
+let container = document.querySelector("div");
+let elements = container.querySelectorAll("h1");
 console.log(elements);
 
 function check(event) {
-    enteredText = event.target.value;
-    for (i = 0; i <= elements.length; i++) {
-        if (elements[i].textContent.indexOf(enteredText) < 0) {
-            elements[i].style.display = "none"
-        }
-        else {
-        elements[i].style.display = "block"
+    enteredText = event.target.value.toUpperCase();
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].textContent.toUpperCase().indexOf(enteredText) < 0) {
+            elements[i].style.display = "none";
+        } else {
+            elements[i].style.display = "block";
         }
     }
 }
